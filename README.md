@@ -14,7 +14,7 @@ HOW TO USE
 First, install the gem: `gem install slack-rtmapi2`.
 
 ```ruby
-require 'slack-rtmapi2'
+require 'slack/rtmapi2'
 
 token = 'xxx'
 channel_id = 'id'

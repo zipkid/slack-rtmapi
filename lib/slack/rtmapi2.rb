@@ -27,7 +27,7 @@ class Slack
     end
 
     def client
-      @client ||= SlackRTM::Client.new websocket_url: @websocket_url
+      @client ||= Slack::RtmApi2::Client.new websocket_url: @websocket_url
     end
   end
 end
