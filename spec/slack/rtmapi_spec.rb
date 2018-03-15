@@ -1,6 +1,6 @@
-RSpec.describe SlackRTM do
+RSpec.describe Slack::RtmApi2 do
   it 'has a version number' do
-    expect(SlackRTM::VERSION).not_to be nil
+    expect(Slack::RtmApi2::VERSION).not_to be nil
   end
 
   it 'does something useful' do

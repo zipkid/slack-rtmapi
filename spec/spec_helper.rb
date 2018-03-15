@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "slack-rtmapi"
+require "slack-rtmapi2"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
