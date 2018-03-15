@@ -1,10 +1,9 @@
 # encoding: utf-8
 
-require_relative 'slack-rtmapi/client'
-require_relative 'slack-rtmapi/version'
-require_relative 'slack_web'
+require 'slack-rtmapi/client'
+require 'slack-rtmapi/version'
+require 'slack_web'
 
-require 'json'
 require 'net/http'
 
 class SlackRTM
