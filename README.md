@@ -1,5 +1,8 @@
-slack-rtmapi
-============
+slack-rtmapi2
+=============
+
+As the original author is not reacting i am taking this over under a new namespace.
+
 All you need to use the RTM api of Slack
 
 Please note that this gem is GPLv3. You *CAN'T* use it for proprietary software.
@@ -8,16 +11,16 @@ If you need a licence, please contact me and I will respond within the 24 hours.
 HOW TO USE
 ----------
 
-First, install the gem: `gem install slack-rtmapi`.
+First, install the gem: `gem install slack-rtmapi2`.
 
 ```ruby
-require 'slack-rtmapi'
+require 'slack-rtmapi2'
 
 token = 'xxx'
 channel_id = 'id'
 
-url = SlackRTM.get_url token: token # get one on https://api.slack.com/web#basics
-client = SlackRTM::Client.new websocket_url: url
+url = Slack::RtmApi2.get_url token: token # get one on https://api.slack.com/web#basics
+client = Slack::RtmApi2::Client.new websocket_url: url
 
 client.on(:message)  { |data| p data }
 client.send channel: channel_id, type: 'message', text: 'Hi there'
@@ -26,10 +29,7 @@ client.main_loop
 assert false # never ending loop
 ```
 
-Slack-rtmapi is very hackable and configurable. More documentation will come soon (especially Rails integration), with helpers for integrations with the usual engines (EventMachine and Rack are planned, maybe Celluloid).  
-Stay tuned and follow the ongoing [_Dead Simple_ serie](https://github.com/mackwic/slack-rtmapi/wiki) on the wiki !
-
-As always, pull request welcome, we are very contributor friendly.
+As always, pull request welcome.
 
 For more informations about the Slack Real Time API, please check https://api.slack.com/rtm
 
